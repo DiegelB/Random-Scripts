@@ -8,10 +8,12 @@ __author__ = 'BenDiegel'
 import random
 
 def magic():
-    answer = raw_input("\nWhat is your question?\n")
+    answer = input("\nWhat is your question?\n")
     if answer == "":
         print "You did not ask a question."
         magic()
+    elif answer == "exit":
+	exit()
     rand = random.randint(1, 11)
     if rand == 1:
         print "It is certain."
@@ -35,7 +37,7 @@ def magic():
         print "Very doubtful."
     elif rand == 11:
         print "Outlook not so good."
-    newQ = raw_input("Type 'exit' to stop playing.\n")
+    newQ = input("Type 'exit' to stop playing.\n")
     if newQ == "exit" or newQ == "Exit":
         exit()
     else:
